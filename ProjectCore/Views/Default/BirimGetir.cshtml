@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "BirimGetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+@model ProjectCore.Models.Birim
+<h1>BirimGetir</h1>
+<br />
+@using (Html.BeginForm("BirimGuncelle","Default",FormMethod.Post))
+{
+    <b>Birim ID</b>
+    @Html.TextBoxFor(x=>x.BirimID, new {@class = "form-control"})
+    <br />
+    <b>Birim Adı</b>
+    @Html.TextBoxFor(x=>x.BirimAd, new {@class = "form-control"})
+    <br />
+    <button class="btn btn-outline-primary" style="background-color:#ebdede; color:black">Birim Güncelle</button>
+
+
+}
+
